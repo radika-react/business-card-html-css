@@ -23,6 +23,27 @@ body{
     position: absolute;
     inset: 0;
     background-color: black;
+    overflow: hidden;
+}
+
+.card .lines::before{
+    content: '';
+    background: linear-gradient(transparent,red,green, blue,transparent);
+    width: 700px;
+    height: 220px;
+    top:50%;
+    left:50%;
+    position: absolute;
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
 }
 
 .card .lines::after{
